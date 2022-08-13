@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 120rem;
+  padding: 2rem;
+  margin: auto;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  width: 100vw;
+  position: relative;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0 0 3rem 0;
+  text-align: center;
+  color: #333;
+}
+
+input {
+  font-size: 1.6rem;
+  font-family: 'Lato', sans-serif;
+  padding: 0.8rem;
+}
+
+fieldset {
+  padding: 0.5rem 2rem;
+  margin-bottom: 0.5rem;
+  border-radius: 2px;
+}
+
+legend {
+  font-size: 1.5rem;
+}
+
+label[for='inc'] {
+  color: green;
+  margin-right: 1.5rem;
+  font-size: 1.5rem;
+}
+label[for='exp'] {
+  color: lightcoral;
+  font-size: 1.5rem;
+}
+
+/* ************************************************************** */
+
+.modal {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(51, 51, 51, 0.8);
+  display: none;
+  place-content: center;
+  z-index: 10;
+  transition: all 0.2s;
+}
+
+.modal__message {
+  width: 100%;
+  height: 100%;
+  background-color: #f4f4f4;
+  display: grid;
+  place-content: center;
+  border-radius: 5px;
+  padding: 1.2rem 3rem;
+}
+
+.modal__message--label {
+  padding: 1rem 0;
+  font-size: 1.6rem;
+}
+
+.edit-entry {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+/* ************************************************************** */
+
+.amounts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.amounts__current {
+  background-color: lightgrey;
+  margin-bottom: 1rem;
+}
+
+.amounts__current--p {
+  font-size: 3rem;
+}
+
+.amounts__divs {
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.amounts__divs--p {
+  font-size: 2.2rem;
+}
+
+.amounts__divs--s {
+  font-size: 1.2rem;
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.amounts__income,
+.amounts__expense {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+.amounts__income {
+  background-color: lightgreen;
+}
+
+.amounts__expense {
+  background-color: lightcoral;
+}
+/* ************************************************************** */
+
+.inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 90%;
+  margin: 2rem auto;
+}
+
+.inputs__description {
+  margin: 2rem 0;
+}
+
+.inputs__submit {
+  margin: 2rem 0;
+}
+
+.inputs__submit--btn {
+  padding: 0.8rem;
+}
+
+@media screen and (max-width: 800px) {
+  .inputs {
+    flex-direction: column;
+  }
+}
+
+/* ************************************************************** */
+
+.transactions {
+  margin: 5rem auto;
+  width: 100%;
+  min-height: 5rem;
+  display: flex;
+}
+
+.transactions__incomes,
+.transactions__expenses {
+  width: 90%;
+  min-height: 3rem;
+  margin: 2rem;
+}
+
+.transactions__incomes--subtitle,
+.transactions__expenses--subtitle {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.transactions__incomes {
+  padding: 1rem;
+}
+
+.transactions__incomes--ul {
+  margin-top: 0.5rem;
+}
+
+.transactions__incomes--li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 0.25rem 0;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.transactions__incomes--li:nth-child(odd) {
+  background-color: #f4f4f4;
+}
+
+.transactions__incomes--p {
+  font-size: 1.6rem;
+  padding: 0 0.5rem;
+}
+
+.transactions__incomes--subtitle {
+  color: lightgreen;
+  font-weight: bold;
+}
+
+.transactions__expenses {
+  padding: 1rem;
+}
+
+.transactions__expenses--ul {
+  margin-top: 0.5rem;
+}
+
+.transactions__expenses--li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 0.25rem 0;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.transactions__expenses--li:nth-child(odd) {
+  background-color: #f4f4f4;
+}
+
+.transactions__expenses--p {
+  font-size: 1.6rem;
+  padding: 0 0.5rem;
+}
+
+.transactions__expenses--subtitle {
+  color: lightcoral;
+  font-weight: bold;
+}
+
+.delete {
+  font-weight: bold;
+}
+
+.delete,
+.edit {
+  cursor: pointer;
+  transition: color 0.2s;
+  margin-left: 1rem;
+}
+
+.delete:hover,
+.edit:hover {
+  color: lightcoral;
+}
+
+@media screen and (max-width: 800px) {
+  .transactions {
+    flex-direction: column;
+    width: 90%;
+  }
+}

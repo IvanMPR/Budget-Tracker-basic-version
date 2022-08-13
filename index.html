@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Tracker</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Budget Tracker App</h1>
+      <div class="amounts">
+        <div class="amounts__current">
+          <p class="amounts__current--p">0</p>
+        </div>
+        <div class="amounts__income amounts__divs">
+          Income
+          <p class="amounts__income--p amounts__divs--p">0</p>
+        </div>
+        <div class="amounts__expense amounts__divs">
+          Expense
+          <p class="amounts__expense--p amounts__divs--p">0</p>
+        </div>
+      </div>
+      <div class="inputs">
+        <div class="inputs__toggler">
+          <fieldset>
+            <legend>Select entry type</legend>
+            <input type="radio" id="inc" name="choice" checked />
+            <label for="inc">Income</label>
+            <input type="radio" id="exp" name="choice" />
+            <label for="exp">Expense</label>
+          </fieldset>
+        </div>
+        <div class="inputs__description">
+          <input
+            class="inputs__description--input"
+            type="text"
+            placeholder="Description"
+          />
+        </div>
+        <div class="inputs__value">
+          <input
+            class="inputs__value--value"
+            type="number"
+            placeholder="Value"
+          />
+        </div>
+        <div class="inputs__submit">
+          <button class="inputs__submit--btn">Add value</button>
+        </div>
+      </div>
+      <div class="transactions">
+        <div class="transactions__incomes">
+          <p class="transactions__incomes--subtitle">Income</p>
+          <ul class="transactions__incomes--ul"></ul>
+        </div>
+        <div class="transactions__expenses">
+          <p class="transactions__expenses--subtitle">Expenses</p>
+          <ul class="transactions__expenses--ul"></ul>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
