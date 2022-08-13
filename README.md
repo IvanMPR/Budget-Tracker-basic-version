@@ -3,4 +3,4 @@
 <img width="100%" src="img/budget.jpg"/>
 <br/> 
 
-Basic budget tracker app with local storage use for saving entries after refresh/close page.
+Basic CRUD app with local storage use for saving entries after refresh/close page.
